@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Big idea contest 2k23</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Custom CSS -->
+    <style>
+        /* Add your custom CSS styles here */
+
+    </style>
+</head>
+<body>
+    <script>
+        // Set the target date and time for the countdown (20/10/2023 00:00:00)
+        const targetDate = new Date("2023-10-20T00:00:00").getTime();
+    
+        // Update the countdown every second
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+    
+            if (distance <= 0) {
+                clearInterval(countdown);
+                document.querySelector(".countdown").innerHTML = "Countdown Expired!";
+            } else {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Format the countdown string
+                const countdownString = `${days} Days: ${hours.toString().padStart(2, "0")} Hours: ${minutes.toString().padStart(2, "0")} Minute: ${seconds.toString().padStart(2, "0")} Seconds`;
+    
+                // Display the countdown in the HTML
+                document.querySelector(".countdown").innerHTML = countdownString;
+            }
+        }, 1000);
+    </script>
+    
+    
+    
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Big Idea Contest 2k23</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#count">Countdown</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inst">Instructions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="jumbotron" id="home" style="position: relative;">
+            <div class="background-image"></div>
+            <!-- Badge at the top-left corner -->
+            <div id="badge" style="position: absolute; top: 0; left: 0; z-index: 1;">
+                <p id="badging-clg">
+                <img id="log3img" src="log3.png" alt="Badge" style="max-width: 50px;">
+                Govt Polytechnic Collage Cherthala
+                </p>
+            </div>
+            <!-- Text wrapping around the badge -->
+            <div style="margin-left: 60px;">
+              <h1 class="display-4">Big Idea Contest 2k23</h1>
+              <p class="lead">Presented By Sci-Minds</p>
+              <img id="log1" src="log1.png" alt="">
+              <hr class="my-4">
+              <p>IEDC Govt Polytechnic College Cherthala.</p>
+              <a id="lm" class="btn btn-warning" href="http://www.gptccherthala.org/activities/innovation-and-entrepreneurship-development-cell" role="button">Learn more</a>
+              <a id="sm" class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLScVVdPBAQjCmo1dcyvHCRsG_5zC15JeLSYCUyR3HRmosfIu0A/viewform" role="button">Submit Idea</a>
+            </div>
+          </div>
+          
+        
+        
+            <div id="count" class="count">
+                <center><h5 class="hurry">Hurry Up!! Clock is ticking</h5></center>
+                <div class="countdown">
+                    <div id="days">00</div>
+                    <div id="hours">00</div>
+                    <div id="minutes">00</div>
+                    <div id="seconds">00</div>
+                </div>   
+                <center><a id="sn"class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLScVVdPBAQjCmo1dcyvHCRsG_5zC15JeLSYCUyR3HRmosfIu0A/viewform" role="button">Submit Your Idea Now!!</a></center> 
+            </div>
+
+            <hr>
+        
+        <!-- Instruction Section -->
+        <section id="inst">
+            <h2>Instructions</h2>
+                    <br>
+                    <h4>English</h4>
+                    <ul>
+                        <li>One person alone or as a group of a maximum of four people can submit ideas.</li>
+                        <li>The team is not mandatory.</li>
+                        <li>You can submit as many ideas as you want.</li>
+                        <li>Faculty and non-teaching staff can also participate along with the students.</li>
+                        <li>It is compulsory to mention your name, department, semester, and phone number.</li>
+                        <li>If the idea is being submitted as a group, give a name for your group and also mention your teammate's name, branch, or department.</li>
+                        <li>The name of the group and details of the group leader are compulsory.</li>
+                        <li>Ideas should be submitted by putting them in the idea box or by using Google Forms (link given below) before October 20, 2023 (20/10/2023).</li>
+                    </ul>    
+                    <h4>Malayalam</h4>
+                    <ul>
+                        <li>ഒരാൾക് ഒറ്റക്കോ അല്ലെങ്കിൽ മാക്സിമം 4 പേര് അടങ്ങുന്ന ഒരു ഗ്രൂപ്പ് ആയിട്ടോ ഐഡിയ സബ്മിറ്റ് ചെയ്യാവുന്നതാണ് </li>
+                        <li>ഗ്രൂപ്പ് വേണമെന്ന് നിർബന്ധമില്ല </li>
+                        <li>എത്ര ഐഡിയ വേണമെങ്കിലും സബ്മിറ്റ് ചെയ്യാം</li>
+                        <li>Faculty,Non-Teaching സ്റ്റാഫുകൾക്കും വിദ്യാർത്ഥികൾക്കൊപ്പം മത്സരിക്കാവുന്നതാണ്</li>
+                        <li>ഗ്രൂപ്പ് ആയിട്ടാണ് ഐഡിയ സബ്മിറ്റ് ചെയ്യുന്നതെങ്കിൽ നിങ്ങളുടെ ഗ്രൂപ്പിന്റെ പേര്,ഗ്രൂപ്പ് മെമ്പേഴ്സിന്റെ പേര്,department,സെമസ്റ്റർ എന്നിവ കൂടി ഉൾപെടുത്തേണ്ടതാണ് </li>
+                        <li>ഗ്രൂപ്പിന്റെ പേരും ഗ്രൂപ്പ് ലീഡറിന്റെ പേര് ,Department ,Semester ,ഫോൺ നമ്പർ എന്നിവ നിർബന്ധമാണ് </li>
+                        <li>നിങ്ങളുടെ ഐഡിയകൾ കോളേജിൽ സ്ഥാപിച്ചിട്ടുള്ള ഐഡിയ ബോക്സുകളിലോ അല്ലെങ്കിൽ താഴെ നൽകിയിട്ടുള്ള ഗൂഗിൾ ഫോംസ് വഴിയോ  20/10/2023 നുള്ളിൽ ഇടേണ്ടതാണ് </li>
+                    </ul>
+        </section>
+
+
+        <hr>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Big Idea Contest is an idea fest conducted by the <b>I</b>nnovation and <b>E</b>ntrepreneurship <b>D</b>evelopment <b>C</b>ell of Govt Polytechnic Collage Cherthala Every Year</p>
+            <ul>
+                <li>However this year this competition is not limited only to students.</li>
+                <li>Faculties can also participate alongside </li>
+            </ul>
+        </section>
+
+        <hr>
+
+    <div class="footer">
+        <p id="foot">
+            copyright @
+            <img id="log3" src="log3.png" alt="College Logo">
+            IEDC Government Polytechnic College Cherthala
+        </p>
+    </div>
+    
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
